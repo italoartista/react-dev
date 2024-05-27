@@ -1,0 +1,14 @@
+.shelf ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    border: 1px solid #ccc;
+    padding: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    max-width: 1200px; 
+
+}

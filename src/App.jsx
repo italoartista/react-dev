@@ -1,58 +1,26 @@
 import { useState } from 'react'
-
+import ListaNomes from './ListaNomes'
+import Logo from './componentes/Logo'
 import './App.css'
+import Shelf from './componentes/Shelf'
 
-
-function Counter() {
-  const [contador, setContador] = useState(100)
-
-  function incremento() {
-    if (contador < 20) {
-
-      setContador(contador + 1)
-    }
-  }
-  function decremento() {
-
-    if (contador > 0) {
-      setContador(contador - 1)
-    }
-  }
-
-  return (
-    <div>
-      <h1>Contador</h1>
-      <button onClick={incremento}>+</button>
-      <p>{contador}</p>
-      <button onClick={decremento}>-</button>
-    </div>
-  )
-}
-
-function ListaNomes({ nomes }) {
-
-  return (
-    <>
-      <ul>
-        {
-        nomes.map((nome, index) =>  <li key={index}>{nome}</li>)
-        }
-      </ul>
-      <input type="text" />
-      <button>Adicionar</button>
-    </>
-  );
-}
-
+const produtos = [ 
+  {id: 1, nome: 'Camiseta', preco: 25.00, image: 'https://via.placeholder.com/150'},
+  {id: 2, nome: 'Calça', preco: 50.00, image: 'https://via.placeholder.com/150'},
+  {id: 3, nome: 'Vestido', preco: 75.00, image: 'https://via.placeholder.com/150'},
+  {id: 4, nome: 'Shorts', preco: 30.00, image: 'https://via.placeholder.com/150'},
+  {id: 5, nome: 'Tênis', preco: 120.00, image: 'https://via.placeholder.com/150'},
+]
 function Botao(props) {
 
   return <button >{}</button>
 }
 function App() {
-  const nomes = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Eduardo']
+ 
   return (
     <>
-      <ListaNomes nomes={nomes} />
+     <Logo />
+      <Shelf products={produtos} />
     </>
   )
 }
